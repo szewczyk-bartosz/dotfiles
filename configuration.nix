@@ -88,6 +88,7 @@
     rofi-wayland
     wlroots
     git
+    networkmanagerapplet
   ];
 
 
