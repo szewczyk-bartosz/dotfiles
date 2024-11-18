@@ -49,7 +49,7 @@
   ####################
   # TODO: Consider wireless connections (networkmanager might be enough but idk)
   networking.hostName = "nixos";
-  networking.networkManager.enable = true;
+  networking.networkmanager.enable = true;
 
 
 
@@ -57,7 +57,7 @@
   ####################
   # 4 - MPD
   ####################
-  services.mpd.user = "bartosz"
+  services.mpd.user = "bartosz";
   systemd.services.mpd.environment = {
     XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.bartosz.uid}";
   };
@@ -136,9 +136,9 @@
   ####################
   # 9 - Audio
   ####################
-  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire {
+  services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
