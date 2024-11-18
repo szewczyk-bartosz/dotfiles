@@ -91,6 +91,7 @@
     vim
     wget
     brave
+    firefox
     neofetch
     kitty
     hyprpaper
