@@ -89,11 +89,13 @@
   ####################
   environment.systemPackages = with pkgs; [
     vim
+    neovim
     wget
     brave
     firefox
     neofetch
     kitty
+    clipboard-jh
     hyprpaper
     rofi-wayland
     wlroots
