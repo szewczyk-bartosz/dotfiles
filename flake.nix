@@ -1,5 +1,5 @@
 {
-  description = "my first flake";
+  description = "my second flake";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.05";
