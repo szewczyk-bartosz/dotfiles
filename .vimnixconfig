@@ -4,4 +4,3 @@ set shiftwidth=2
 set expandtab
 
 inoremap jk <ESC>
-set clipboard+=unnamedplus
