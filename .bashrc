@@ -1,6 +1,6 @@
 export EDITOR=nvim
 export PATH=$PATH:~/scripts
-cat ~/.cache/wal/sequences &
+# cat ~/.cache/wal/sequences &
 neofetch
 alias cfgedit='sudo -E -s nvim /etc/nixos/configuration.nix'
 alias waybarreset="pkill -SIGUSR2 waybar"
