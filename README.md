@@ -7,7 +7,7 @@ Hopefully I can help someone as well whilst I am at it, and who knows, maybe one
 
 
 List of things to do:
-- [ ] Make the boot part of the config less hardcoded
+- [ ] Make the boot part of the config less PC specific
 - [ ] Switch to a flake setup
 - [ ] Switch to home manager
 - [ ] Move .bashrc config to home manager
