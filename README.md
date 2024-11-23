@@ -1,5 +1,5 @@
-# nixos-config
-Hello my name is Bartosz, thanks for checking out my nixos-config
+# Bartosz's Dotfiles
+Hello my name is Bartosz, thanks for checking out my dotfiles directory
 
 This is going to document the process of me learning how to use git and setting up my dream PC using it!
 
