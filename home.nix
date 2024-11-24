@@ -71,6 +71,20 @@
     # EDITOR = "emacs";
   };
 
+  programs.bash = {
+
+    enable = true;
+    shellAliases = {
+      "ll" = "ls -a";
+      ".." = "cd .. ";
+      "cfgedit" = "sudo -E -s nvim /etc/nixos/configuration.nix";
+      "waybarreset" = "pkill -SIGUSR2 waybar";
+      "getmusic" = "yt-dlp -x --audio-format mp3 --audio-quality 0 --download-archive ~/Music/archive -o '$HOME/Music/%(title)s.%(ext)s' --replace-in-metadata title ' ' '-'";
+      "batper" = "cat /sys/class/power_supply/BAT1/capacity";
+      "nixedit" = "nvim -u ~/.dotfiles/.vimnixconfig";
+    };
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
