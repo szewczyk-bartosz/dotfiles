@@ -20,16 +20,16 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [ inputs.hyprpanel.overlay ];
+        };
         modules = [ ./configuration.nix ];
       };
     };
     homeConfigurations = {
       bartosz = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [ inputs.hyprpanel.overlay ];
-        };
-        modules = [ ./home.nix ];
+      pkgs = nixpkgs.legacyPackages.${system};
       };
     };
 
