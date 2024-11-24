@@ -97,15 +97,20 @@
     kitty
     clipboard-jh
     hyprpaper
-    hyprpanel
+    kdePackages.dolphin
+    # Lets fix icons!
+    icon-library
     rofi-wayland
     wlroots
     git
+    ags
   ];
 
   fonts.packages = with pkgs; [
     nerdfonts
   ];
+  fonts.fontDir.enable = true;
+  fonts.fontconfig.allowType1 = true;
 
 
 

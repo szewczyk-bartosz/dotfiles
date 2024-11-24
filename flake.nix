@@ -12,18 +12,13 @@
   self,
   nixpkgs,
   home-manager,
-  hyprpanel, ... }:
+  ... }:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
       nixos = lib.nixosSystem {
-        inherit system;
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [ inputs.hyprpanel.overlay ];
-        };
         modules = [ ./configuration.nix ];
       };
     };
@@ -34,9 +29,5 @@
       };
     };
 
-    extraSpecialArgs = {
-      inherit system;
-      inherit inputs;
-    };
   };
 }
