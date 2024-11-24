@@ -1,5 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
+# Edit this configuration file to define what should be installed on your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 # For steam
@@ -96,7 +95,11 @@
     neofetch
     kitty
     # Lets fix icons!
+    nerdfonts
+    gnome.adwaita-icon-theme
     icon-library
+    cliphist
+    wl-clipboard
 
     rofi-wayland
     wlroots
