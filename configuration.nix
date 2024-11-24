@@ -219,6 +219,27 @@
   #####################
   virtualisation.virtualbox.host.enable = true;
 
+
+
+  #######################
+  # 16 - Steam and unfree
+  #######################
+  nixpkgs.config.allowUnfreePredicate = pkg:
+  builtins.elem (lib.getName pkg) [
+    "steam"
+    "steam-original"
+    "steam-run"
+    "discord"
+    "vscode"
+  ];
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtd.enable = true;
