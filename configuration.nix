@@ -91,7 +91,6 @@
     vim
     neovim
     wget
-    nerdfonts
     brave
     firefox
     neofetch
@@ -102,6 +101,10 @@
     rofi-wayland
     wlroots
     git
+  ];
+
+  fonts.packages = with pkgs; [
+    nerdfonts
   ];
 
 
