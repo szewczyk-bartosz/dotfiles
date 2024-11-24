@@ -29,7 +29,8 @@
     };
     homeConfigurations = {
       bartosz = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = nixpkgs.legacyPackages.${system};
+        modules = [ ./home.nix ];
       };
     };
 
