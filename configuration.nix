@@ -229,8 +229,6 @@
     "steam"
     "steam-original"
     "steam-run"
-    "discord"
-    "vscode"
   ];
 
   programs.steam = {

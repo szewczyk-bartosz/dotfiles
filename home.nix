@@ -102,6 +102,11 @@
     # };
   # };
 
+  nixpkgs.config.allowUnfreePredicate = pkg:
+  builtins.elem (lib.getName pkg) [
+    "discord"
+    "vscode"
+  ];
 
   programs.bash = {
     enable = true;
