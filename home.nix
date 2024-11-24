@@ -17,12 +17,32 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.hello
-    pkgs.hyprpanel
+    hyprpanel
 
+    vim
+    neovim
+    brave
+    firefox
+    neofetch
+    kitty
+    obs-studio
+    vlc
+    cmatrix
+    onlyoffice-bin
+    python3
+    lf
+    pywal
+    alacritty
+    killall
+    yt-dlp
+    vscode
+    webcord
+    gimp
+    heroic
+    
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -82,8 +102,23 @@
     # };
   # };
 
-  programs.bash = {
+  nixpkgs.config.allowUnfreePredicate = pkg:
+  builtins.elem (lib.getName pkg) [
+    "steam"
+    "steam-original"
+    "steam-run"
+    "discord"
+    "vscode"
+  ];
 
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+  };
+
+  programs.bash = {
     enable = true;
     shellAliases = {
       "ll" = "ls -a";

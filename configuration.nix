@@ -87,24 +87,20 @@
   # 5 - System Packages
   ####################
   environment.systemPackages = with pkgs; [
-    vim
-    neovim
-    wget
-    brave
-    firefox
-    neofetch
-    kitty
-    # Lets fix icons!
+    razergenie
+    util-linux
+    keepassxc
+    gnupg
     nerdfonts
     gnome.adwaita-icon-theme
     icon-library
     cliphist
     wl-clipboard
-
     hyprshot
     rofi-wayland
     wlroots
     git
+    wget
   ];
 
   fonts.packages = with pkgs; [
@@ -179,7 +175,7 @@
   ####################
   users.users.bartosz = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "openrazer"];
     packages = with pkgs; [
     ];
   };
@@ -203,12 +199,25 @@
   ####################
   console.keyMap = "uk";
   services.printing.enable = true;
+  services.flatpak.enable = true;
 
   ####################
-  # 12 - Enable flakes
+  # 13 - Enable flakes
   ####################
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+
+  ####################
+  # 14 - Razer
+  ####################
+  hardware.openrazer.enable = true;
+
+
+  #####################
+  # 15 - Virtualisation
+  #####################
+  virtualisation.virtualbox.host.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
