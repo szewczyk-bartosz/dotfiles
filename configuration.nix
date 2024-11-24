@@ -95,11 +95,9 @@
     firefox
     neofetch
     kitty
-    clipboard-jh
-    hyprpaper
-    kdePackages.dolphin
     # Lets fix icons!
     icon-library
+
     rofi-wayland
     wlroots
     git
