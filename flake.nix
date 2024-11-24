@@ -5,13 +5,17 @@
     nixpkgs.url = "nixpkgs/nixos-24.05";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = inputs @ {
+  self,
+  nixpkgs,
+  home-manager,
+  hyprpanel, ... }:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
       nixos = lib.nixosSystem {
@@ -19,12 +23,19 @@
         modules = [ ./configuration.nix ];
       };
     };
-
     homeConfigurations = {
       bartosz = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [ inputs.hyprpanel.overlay ];
+        };
         modules = [ ./home.nix ];
       };
+    };
+
+    extraSpecialArgs = {
+      inherit system;
+      inherit inputs;
     };
   };
 }
