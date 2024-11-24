@@ -10,7 +10,7 @@ List of things to do:
 - [ ] Make the boot part of the config less PC specific
 - [x] Switch to a flake setup
 - [ ] Switch to home manager
-- [ ] Move .bashrc config to home manager
+- [x] Move .bashrc config to home manager
 - [ ] Move neovim config to home manager
 - [ ] Configure hyprland in home manager
 
