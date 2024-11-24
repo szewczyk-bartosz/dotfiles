@@ -72,6 +72,16 @@
     # EDITOR = "emacs";
   };
 
+  # wayland.windowManager.hyprland = {
+    # enable = true;
+    # settings = {
+# 
+      # "$mod" = "ALT"
+# 
+      # 
+    # };
+  # };
+
   programs.bash = {
 
     enable = true;

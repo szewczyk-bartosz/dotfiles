@@ -101,10 +101,10 @@
     cliphist
     wl-clipboard
 
+    hyprshot
     rofi-wayland
     wlroots
     git
-    ags
   ];
 
   fonts.packages = with pkgs; [
