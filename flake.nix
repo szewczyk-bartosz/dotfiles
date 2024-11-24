@@ -11,11 +11,11 @@
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    pkgs = nixpks.legacyPackages.${system};
+    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
       nixos = lib.nixosSystem {
-        inherit system
+        inherit system;
         modules = [ ./configuration.nix ];
       };
     };
