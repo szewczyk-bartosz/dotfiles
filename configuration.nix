@@ -97,6 +97,7 @@
     kitty
     # Lets fix icons!
     icon-library
+    cliphist
 
     rofi-wayland
     wlroots
