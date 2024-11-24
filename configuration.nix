@@ -99,7 +99,10 @@
     gnome.adwaita-icon-theme
     icon-library
     cliphist
+<<<<<<< HEAD
     wl-clipboard
+=======
+>>>>>>> ee96232872ee2edf39882f06f98da9658f8ce476
 
     rofi-wayland
     wlroots
