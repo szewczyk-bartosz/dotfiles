@@ -91,16 +91,17 @@
     vim
     neovim
     wget
+    nerdfonts
     brave
     firefox
     neofetch
     kitty
     clipboard-jh
     hyprpaper
+    hyprpanel
     rofi-wayland
     wlroots
     git
-    networkmanagerapplet
   ];
 
 
